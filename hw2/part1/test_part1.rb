@@ -26,12 +26,30 @@ end
 
 class TestPart1B < Test::Unit::TestCase
 
-  def test_palidrome_on_string
+  def test_palidrome_returns_false
     assert !"foo".palindrome?
   end
 
-  def test_palidrome_on_string
+  def test_palidrome_returns_true
     assert "oofoo".palindrome?
+  end
+  
+end
+
+
+class TestPart1C < Test::Unit::TestCase
+
+  def test_enumerable_palindrome_returns_true
+    assert [1,2,3,2,1].palindrome?
+  end
+
+  def test_hash_palindrome_no_error
+    hash = {:a => 1, :b => 2, :c => 3}
+    assert !hash.palindrome?
+  end
+
+  def test_palindrome_empty_array
+    assert [].palindrome?
   end
   
 end

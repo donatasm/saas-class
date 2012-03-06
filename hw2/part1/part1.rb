@@ -23,6 +23,7 @@ class Numeric
 
 end
 
+
 ## Part B
 #--------------------------------------
 def xpalindrome?(string)
@@ -35,7 +36,6 @@ def xpalindrome?(string)
   end
 end
 
-
 class String
   def palindrome?
     xpalindrome?(self)
@@ -43,3 +43,11 @@ class String
 end
 
 
+## Part C
+#--------------------------------------
+module Enumerable
+  def palindrome?
+    reversed = self.reverse_each.to_a
+    reversed <=> self
+  end
+end
