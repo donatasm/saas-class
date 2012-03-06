@@ -22,3 +22,16 @@ class TestPart1A < Test::Unit::TestCase
   end
   
 end
+
+
+class TestPart1B < Test::Unit::TestCase
+
+  def test_palidrome_on_string
+    assert !"foo".palindrome?
+  end
+
+  def test_palidrome_on_string
+    assert "oofoo".palindrome?
+  end
+  
+end

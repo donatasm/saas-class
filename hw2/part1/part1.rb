@@ -1,4 +1,6 @@
 
+## Part A
+#--------------------------------------
 class Numeric
 
   @@currencies = {'dollar' => 1, 'yen' => 0.013, 'euro' => 1.292, 'rupee' => 0.019}
@@ -20,3 +22,24 @@ class Numeric
   end
 
 end
+
+## Part B
+#--------------------------------------
+def xpalindrome?(string)
+  if string
+    downcaseWord = string.gsub(/\W/, "").downcase
+    if downcaseWord.length > 0
+      return downcaseWord.eql? downcaseWord.reverse
+    end
+    return false
+  end
+end
+
+
+class String
+  def palindrome?
+    xpalindrome?(self)
+  end
+end
+
+
