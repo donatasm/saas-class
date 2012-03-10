@@ -47,7 +47,6 @@ end
 #--------------------------------------
 module Enumerable
   def palindrome?
-    reversed = self.reverse_each.to_a
-    reversed <=> self
+    (self.is_a? Array) ? self.reverse == self : self.to_a.palindrome?
   end
 end

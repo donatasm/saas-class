@@ -51,5 +51,9 @@ class TestPart1C < Test::Unit::TestCase
   def test_palindrome_empty_array
     assert [].palindrome?
   end
+
+  def test_palindrome_not_palindrome
+    assert ![1,2,3,4,3,2].palindrome?
+  end
   
 end
